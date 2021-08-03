@@ -34,6 +34,38 @@ public class Registration {
 		this.rgID = rgID;
 	}
 
+	public int getRgNo() {
+		return rgNo;
+	}
+
+	
+	public int getTuitimeID() {
+		return tuitimeID;
+	}
+
+	
+	public String getStEmail() {
+		return stEmail;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	
+	public String getTime() {
+		return time;
+	}
+
+	public int getRgID() {
+		return rgID;
+	}
+
 	
 	
 
