@@ -35,11 +35,13 @@ public class TuitionManagementSystem {
 					isCorrect1 = true;
 				} else {
 					System.out.println("Username or password is incorrect, please try again!");
+					isCorrect1 = false;
 				}
 				Helper.line(80, "-");
 				}
+			}
 			
-	     	if (option == 2) {
+			else if (option == 2) {
 			boolean isCorrect2 = false; 
 			
 			if (isCorrect2 == false) {
@@ -53,26 +55,28 @@ public class TuitionManagementSystem {
 				}
 				Helper.line(80, "-");
 			}
-				if (option == 3) {
-					boolean isCorrect3 = false; 
-					
-					if (isCorrect3 == false) {
-						String Username3 = Helper.readString("Username >  ");
-						String Password3 = Helper.readString("Password >  ");
-						
-						if(manager.getUsername().equals(Username3) && manager.getPassword().equals(Password3)) {
-							isCorrect3 = true;
-						} else {
-							System.out.println("Username or password is incorrect, please try again!");
-						}
-						Helper.line(80, "-");
-					}
-				
-			}else if (option == OPTION_QUIT) {
-				System.out.println("Bye!");
-			} else {
-				System.out.println("Invalid option");
 			}
+				
+		
+	     	else if (option == 3) {
+				boolean isCorrect3 = false; 
+				
+				if (isCorrect3 == false) {
+					String Username3 = Helper.readString("Username >  ");
+					String Password3 = Helper.readString("Password >  ");
+					
+					if(manager.getUsername().equals(Username3) && manager.getPassword().equals(Password3)) {
+						isCorrect3 = true;
+					} else {
+						System.out.println("Username or password is incorrect, please try again!");
+					}
+					Helper.line(80, "-");
+				}
+			
+		}else if (option == OPTION_QUIT) {
+			System.out.println("Bye!");
+		} else {
+			System.out.println("Invalid option");
 		}
 		
 			//administrator menu
@@ -105,16 +109,18 @@ public class TuitionManagementSystem {
 				System.out.println("THANKS FOR USING TUITION MANAGEMENT CENTRE!");
 
 			}
-		}
-		}else if (option == admin_QUIT) {
+		
+		else if (option == admin_QUIT) {
 			System.out.println("Bye!");
+		
 		} else {
 			System.out.println("Invalid option");
 		}
-		
+			
 	
 			
-}
+		}
+		}
 }
 		
 		

@@ -12,6 +12,7 @@ import java.time.LocalTime;
  * @author Yaswini
  *
  */
+
 public class Registration {
 	
 	private int rgNo;

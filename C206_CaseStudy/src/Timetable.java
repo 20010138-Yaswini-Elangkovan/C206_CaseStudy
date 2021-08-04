@@ -10,7 +10,7 @@ public class Timetable {
 	private String endTime;
 	private String mode;
 	private boolean classFull;
-	//aini
+	//aini wee
 	public Timetable(String tuitionID, double price, String startDate, String startTime, String endDate, String endTime,String mode, boolean classFull) {
 		this.tuitionID = tuitionID;
 		this.price = price;
