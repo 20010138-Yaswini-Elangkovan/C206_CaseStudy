@@ -248,6 +248,7 @@
 			  Helper.line(80, "-");
 			    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
 			    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
+			    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
 
 			  
 			  }
