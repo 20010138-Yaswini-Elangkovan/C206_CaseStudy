@@ -9,7 +9,8 @@ public class C206_CaseStudy {
 
 
 	//wini was here
-	  private static final int OPTION_QUIT = 15;
+	  private static final int OPTION_QUIT = 15
+			  ;
 	  public static void main(String[] args) {
 	    ArrayList<Timetable> timetableList = new ArrayList<Timetable>();
 	    ArrayList<Timetable> registrationList = new ArrayList<Timetable>();
@@ -31,11 +32,12 @@ public class C206_CaseStudy {
 	      String Password = Helper.readString("Password >  ");
 	      
 	      if(admin.getUsername().equals(Username) && admin.getPassword().equals(Password)) {
-	        isValid = true;
-	      
-	    
+	        
+	      //Wini's magic
+	    while(option != 4) {
 	      Helper.line(80, "-");
 	      C206_CaseStudy .adminmenu();
+	      
 	      int adminOption  = Helper.readInt("Enter option to select  > ");
 
 	      if(adminOption == 1) {
@@ -43,42 +45,40 @@ public class C206_CaseStudy {
 	        System.out.println("VIEW TUITION TIMETABLE");
 	        System.out.println("ALL THE VIEW TIMETABLE WILL BE HERE!!!");
 	        Helper.line(80, "-");
-	        C206_CaseStudy .adminmenu();
+	       // C206_CaseStudy .adminmenu();
 	        int adminOption1  = Helper.readInt("Enter option to select  > ");
-	        
-	        
+
 	      }
 	      else if(adminOption == 2) {
 	        Helper.line(80, "-");
 	        System.out.println("ADD TUITION TIMETABLE");
 	        System.out.println("ADD FUNCTION WILL BE HERE!!!");
 	        Helper.line(80, "-");
-	        C206_CaseStudy .adminmenu();
+	        //C206_CaseStudy .adminmenu();
 	        int adminOption2  = Helper.readInt("Enter option to select  > ");
-	        
-	        
+
 	      }
-	      
 	      else if(adminOption == 3) {
 	        Helper.line(80, "-");
 	        System.out.println("DELETE TUITION TIMETABLE");
 	        System.out.println(" DELETE FUNCTION WILL BE HERE!!!");
 	        Helper.line(80, "-");
-	        C206_CaseStudy .adminmenu();
+	        //C206_CaseStudy .adminmenu();
 	        int adminOption3  = Helper.readInt("Enter option to select  > ");
 	      }
-	      
-	      else if(adminOption == OPTION_QUIT) {
+	      	else if(adminOption == 4) {
 	        Helper.line(80, "-");
 	        System.out.println("THANKS FOR USING TUITION MANAGEMENT CENTRE!");
 //	        C206_CaseStudy .menu();
 //	      option = Helper.readInt("Login as > ");
-	        
+	     
 	      }
-	      
-	    } else {
+	      isValid = true;
+	    }
+	      }else {
 	      System.out.println("Invalid option");
 	    }
+	      
 	      
 	    } else {
 	        System.out.println("Username or password is incorrect, please try again!");
