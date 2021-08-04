@@ -13,13 +13,13 @@ public class TuitionManagementSystem {
 	
 		//AINI DID THIS
 
-		
+		//creatiing objects
 		Administrator admin = new Administrator("Admin", "Admin");
 		Student student = new Student("Student", "Student");
 		Manager manager = new Manager("Manager", "Manager");
 		
 		// LOGIN PAGE
-
+//password setting
 		int option = 0;
 		while (option != OPTION_QUIT) {
 			TuitionManagementSystem.menu();
@@ -27,19 +27,19 @@ public class TuitionManagementSystem {
 			if (option == 1) {
 				boolean isCorrect1 = false; 
 				
-				if (isCorrect1 == false) {
-					String Username1 = Helper.readString("Username >  ");
-					String Password1 = Helper.readString("Password >  ");
+			if (isCorrect1 == false) {
+				String Username1 = Helper.readString("Username >  ");
+				String Password1 = Helper.readString("Password >  ");
 					
-					if(student.getUsername().equals(Username1) && student.getPassword().equals(Password1)) {
-						isCorrect1 = true;
-					} else {
-						System.out.println("Username or password is incorrect, please try again!");
-					}
-					Helper.line(80, "-");
+				if(student.getUsername().equals(Username1) && student.getPassword().equals(Password1)) {
+					isCorrect1 = true;
+				} else {
+					System.out.println("Username or password is incorrect, please try again!");
+				}
+				Helper.line(80, "-");
 				}
 			
-		if (option == 2) {
+	     	if (option == 2) {
 			boolean isCorrect2 = false; 
 			
 			if (isCorrect2 == false) {
@@ -132,7 +132,7 @@ public class TuitionManagementSystem {
 		Helper.line(80, "-");
 
 	}
-	
+	//menusss
 	public static void setHeader(String header) {
 		Helper.line(80, "-");
 		System.out.println(header);
