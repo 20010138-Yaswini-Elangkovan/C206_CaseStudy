@@ -9,13 +9,15 @@
  * @author Yaswini
  *
  */
-
+import java.util.ArrayList;
 			public class TuitionManagement {
 			  private static final int OPTION_QUIT = 4;
 			  
 			  public static void main(String[] args) {
 			  
+			    ArrayList<Enquiry> EnquiryList = new ArrayList<Enquiry>();
 			    
+			    EnquiryList.add(new Enquiry(101, "A", "10-10-10"));
 			    Administrator admin = new Administrator("Admin", "Admin");
 			    Student student = new Student("Student", "Student");
 			    Manager manager = new Manager("Manager", "Manager");
@@ -92,11 +94,11 @@
 			                }else if (managerOption == 4) {
 			                  TuitionManagement.deleteTuitionTeacherDetails();
 			                }else if (managerOption == 5) {
-			                  TuitionManagement.viewEnquiry();
+			                  TuitionManagement.viewEnquiry(EnquiryList);
 			                }else if (managerOption == 6) {
-			                  TuitionManagement.addEnquiry();
+			                  TuitionManagement.addEnquiry(EnquiryList, null);
 			                }else if (managerOption == 7) {
-			                  TuitionManagement.deleteEnquiry();
+			                  TuitionManagement.deleteEnquiry(EnquiryList, managerOption);
 			                }else if (managerOption == 8) {
 			                  TuitionManagement.quit();
 			              
@@ -234,22 +236,51 @@
 			    System.out.println("DeleteTuitionTeacherDetails FUNCTION WILL BE HERE");
 			    
 			  }
-			public static void viewEnquiry() {
-			  Helper.line(80, "-");
-			    System.out.println("viewEnquiry FUNCTION WILL BE HERE");
-			  
-			  }
-			public static void addEnquiry() {
+			public static String retrieveAllEnquiry(ArrayList<Enquiry> EnquiryList) {
+				String output = "";
+				
+				for (int i = 0; i < EnquiryList.size(); i++) {
+
+					output += String.format("%-10s %-30s %-10s \n", EnquiryList.get(i).getenquiryid(),
+							EnquiryList.get(i).gettitle(), 
+							EnquiryList.get(i).getdate());
+				}
+				return output;
+			}
+			public static void viewEnquiry(ArrayList<Enquiry> EnquiryList) {
+
+				System.out.println("Enquiry List");
+				String output = String.format("%-10s %-30s %-10s\n", "ENQUIRY ID", "TITLE",
+						 "DATE" );
+				 output +=getAllEnquiry(EnquiryList);
+				System.out.println(output);
+			}
+			private static String getAllEnquiry(ArrayList<Enquiry> EnquiryList) {
+				return retrieveAllEnquiry(EnquiryList);
+
+			
+			}
+				public static void addEnquiry(ArrayList<Enquiry> EnquiryList, Enquiry e) {
+					EnquiryList.add(e);
+					System.out.println("Enquiry added");
 			  Helper.line(80, "-");
 			    System.out.println("addEnquiry FUNCTION WILL BE HERE");
 			   
 			  }
-			public static void deleteEnquiry() {
-			  Helper.line(80, "-");
-			    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
-			    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
-			    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
-
+				public static boolean deleteEnquiry(ArrayList<Enquiry> EnquiryList, int enquiryid) {
+					for (int i = 0; i < EnquiryList.size(); i++) {
+						Enquiry e = EnquiryList.get(i);
+						
+						if (e.getenquiryid() == enquiryid ) {
+							EnquiryList.remove(i);
+							System.out.println("Enquiry deleted");
+							Helper.line(80, "-");
+						    System.out.println("deleteEnquiry FUNCTION WILL BE HERE");
+							return true;
+						} 
+						
+					}		
+						return false;
 			  
 			  }
 //
