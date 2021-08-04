@@ -8,7 +8,7 @@ public class C206_CaseStudy {
 
 
 
-	
+	//wini was here
 	  private static final int OPTION_QUIT = 15;
 	  public static void main(String[] args) {
 	    ArrayList<Timetable> timetableList = new ArrayList<Timetable>();
