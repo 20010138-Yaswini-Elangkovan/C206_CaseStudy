@@ -10,7 +10,7 @@ public class TuitionManagementSystem {
 		ArrayList<Timetable> timetableList = new ArrayList<Timetable>();
 		ArrayList<Timetable> registrationList = new ArrayList<Timetable>();
 		Administrator admin = new Administrator("Admin", "Admin");
-		
+		//AINI DID THIS
 		int option = 0;
 		while (option != OPTION_QUIT) {
 			TuitionManagementSystem.menu();
@@ -110,6 +110,21 @@ public class TuitionManagementSystem {
 		System.out.println("3. Delete Timetable");
 		System.out.println("4. Quit");
 		Helper.line(80, "-");
+		
+	}
+	public static void studentmenu() {
+		System.out.println("1.Register Timetable");
+		System.out.println("2.Edit Details");
+		System.out.println("3.Search for tuition and timetable");
+		System.out.println("4.Cancel Registration");
+		System.out.println("5.Quit");
+	}
+	public static void managermenu() {
+//		System.out.println("1.Search Tuition");
+//		System.out.println("2.Edit Details");
+//		System.out.println("3.Search for tuition and timetable");
+//		System.out.println("4.Cancel Registration");
+//		System.out.println("5.Quit");
 		
 	}
 

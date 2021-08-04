@@ -9,8 +9,8 @@ public class C206_CaseStudy {
 
 
 	//wini was here
-	  private static final int OPTION_QUIT = 15
-			  ;
+	  private static final int OPTION_QUIT = 15;
+	  private static final int OPTION_QUIT1 = 4;
 	  public static void main(String[] args) {
 	    ArrayList<Timetable> timetableList = new ArrayList<Timetable>();
 	    ArrayList<Timetable> registrationList = new ArrayList<Timetable>();
@@ -34,7 +34,7 @@ public class C206_CaseStudy {
 	      if(admin.getUsername().equals(Username) && admin.getPassword().equals(Password)) {
 	        
 	      //Wini's magic
-	    while(option != 4) {
+	    while(option != OPTION_QUIT1) {
 	      Helper.line(80, "-");
 	      C206_CaseStudy .adminmenu();
 	      
@@ -66,7 +66,7 @@ public class C206_CaseStudy {
 	        //C206_CaseStudy .adminmenu();
 	        int adminOption3  = Helper.readInt("Enter option to select  > ");
 	      }
-	      	else if(adminOption == 4) {
+	      	else if(adminOption == OPTION_QUIT1) {
 	        Helper.line(80, "-");
 	        System.out.println("THANKS FOR USING TUITION MANAGEMENT CENTRE!");
 //	        C206_CaseStudy .menu();
