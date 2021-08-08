@@ -2,7 +2,7 @@
 
 public class Timetable {
 
-	private String tuitionID;
+	private int tuitionID;
 	private double price;
 	private String startDate;
 	private String startTime;
@@ -11,7 +11,7 @@ public class Timetable {
 	private String mode;
 	private boolean classFull;
 	//aini wee
-	public Timetable(String tuitionID, double price, String startDate, String startTime, String endDate, String endTime,String mode, boolean classFull) {
+	public Timetable(int tuitionID, double price, String startDate, String startTime, String endDate, String endTime,String mode, boolean classFull) {
 		this.tuitionID = tuitionID;
 		this.price = price;
 		this.startDate =startDate;
@@ -19,10 +19,10 @@ public class Timetable {
 		this.endDate = endDate;
 		this.endTime = endTime;
 		this.mode = mode;
-		this.classFull = true;
+		this.classFull = false;
 		
 	}
-	public String getTuitionID() {
+	public int getTuitionID() {
 		return tuitionID;
 	}
 	
@@ -30,7 +30,7 @@ public class Timetable {
 		return price;
 	}
 	
-	public String getstartDateTime() {
+	public String getstartDate() {
 		return startDate;
 	}
 	
@@ -51,6 +51,10 @@ public class Timetable {
 	
 	public boolean getclassFull() {
 		return classFull;
+	}
+	
+	public void setClassFull(boolean classFull) {
+		this.classFull = classFull;
 	}
 	public static void add(Timetable timetable) {
 		// TODO Auto-generated method stub
